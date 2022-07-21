@@ -1,13 +1,16 @@
 let x=document.getElementById("output");
 
-function display(num){
-    x.value+=num;
+function solve(){
+   x = document.getElementById("output").value
+   y=eval(x)
+   document.getElementById("output").value=y
 }
-function calculate(){
-    try{
-        x.value=eval(x.value);
-    }
-    catch(err){
-        alert("invalid")
-    }
+function display(equal){
+    document.getElementById("output").value+=equal
+}
+function clr(){
+    document.getElementById("output").value=""
+}
+function del(abc){
+    document.getElementById("output").vlaue
 }

@@ -1,8 +1,8 @@
-*{
+ *{
     margin: 2px;
     padding: 10px;
     box-sizing: border-box;
-    background-color:#ae66f2;
+    background-color:info;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -24,7 +24,7 @@
 input{
     grid-column: span 4;
     height: 60px;
-    width: 150px;
+    width: 250px;
     background-color:#ecf0f3;
     box-shadow: inset -5px -5px 12px #ffffff
     5px 5px 12px rgba(0,0,0,.16);
@@ -49,7 +49,7 @@ margin: 10px;
 font-size: small;
 }
 .equal{
-    width:105px;
+    width:115px;
     border-radius: 30px;
     background-color:#ecf0f3;
     box-shadow: inset -5px -5px 12px #ffffff

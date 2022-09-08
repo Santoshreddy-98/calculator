@@ -4,18 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Calculator</title>
-    
-
-    <script src="./calci.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./calci.css">
 </head>
 <body>  
     <div class="container">
         <div class="calculator">
-            <input type="text" placeholder="0" id="output" onclick="display()"/>
+            <input type="text" placeholder="0" id="output"/>
             <button onclick="clr()">clr</button>
             <button onclick="del()">Del</button>
-            <button onclick="display()">%</button>
+            <button onclick="display('%')">%</button>
             <button onclick="display('/')">/</button>
             <button onclick="display('7')">7</button>
             <button onclick="display('8')">8</button>
@@ -31,9 +28,29 @@
             <button onclick="display('+')">+</button>
             <button onclick="display('.')">.</button>
             <button onclick="display(0)" class="0">0</button>
-            <button onclick="solve()" class="equal">=</button>
+            <button onclick="calculate()" class="equal">=</button>
         </div>
     </div>
+    <script>
+        let x=document.getElementById("output");
+        function display(num){
+    x.value += num
+}
+function calculate(){
+    try{
+        x.value=eval(x.value)
+    }
+    catch(err){
+        alert("invalid")
+    }
+}
+function clr(){
+    x.value="";
+}
+function del(){
+    x.value=x.value.slice(0,-1)
+}
+    </script>
     
 </body>
 </html>
